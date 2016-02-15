@@ -201,27 +201,29 @@
         <div>
             <div class="row">
                 <div class="12u">
-                    <form method="post" action="#">
+                    <form  action="https://docs.google.com/a/groovecs.com/forms/d/1EkGPqNSCfGiaVtpxkhZPj6CzUVhGrCMnks0OvES5gLg/formResponse"
+                          method="POST" id="ss-form" >
                         <div>
                             <div class="row">
                                 <div class="6u 12u(mobile)">
-                                    <input type="text" name="name" id="name" placeholder="Name" required/>
+                                    <input type="text" placeholder="Name" required name="entry.1861355277" id="entry_1861355277"
+                                           dir="auto" aria-label="Name" />
                                 </div>
                                 <div class="6u 12u(mobile)">
-                                    <input type="email" name="email" id="email" placeholder="Email" required/>
+                                    <input type="email"  name="entry.167628831" id="entry_167628831" placeholder="Email" required/>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="12u">
                                     <input type="tel" pattern="^\(?([0-9]{3})\)?[-.●]?([0-9]{3})[-.●]?([0-9]{4})$"
-                                           name="mobile" id="subject" placeholder="Mobile"
+                                           name="entry.1334012057" id="entry_1334012057" placeholder="Mobile"
                                            title="Provide mobile telephone number such as 000-000-0000"/>
                                 </div>
                             </div>
 
                             <div class="row">
                                 <div class="12u">
-                                    <textarea name="message" id="message" placeholder="Message"></textarea>
+                                    <textarea name="entry.1352035237"  id="entry_1352035237" placeholder="Message"></textarea>
                                 </div>
                             </div>
                             <!--	-->
@@ -234,6 +236,12 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Google Form required hidden fields -->
+                        <input type="hidden" name="draftResponse" value="[,,&quot;-4949497598778831029&quot;]">
+                        <input type="hidden" name="pageHistory" value="0">
+                        <input type="hidden" name="fvv" value="0">
+                        <input type="hidden" name="fbzx" value="-4949497598778831029">
+
                     </form>
                 </div>
             </div>
@@ -287,7 +295,23 @@
 <!--[if lte IE 8]>
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
-
+<script type="text/javascript">
+    var frm = $('#ss-form');
+    frm.submit(function (ev) {
+        ev.preventDefault();
+        $.ajax({
+            type: frm.attr('method'),
+            url: frm.attr('action'),
+            data: frm.serialize(),
+            success: function (data, textStatus, jqXHR) {
+                alert(textStatus);
+            },
+            error:function( jqXHR,  textStatus,  errorThrown){
+                alert(textStatus);
+            }
+        });
+    });
+</script>
 </body>
 </html>
 <!-- Portfolio -->
