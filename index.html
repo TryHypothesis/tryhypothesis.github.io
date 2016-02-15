@@ -30,8 +30,9 @@
 
 
     <!--[if lte IE 8]>
-    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script><![endif]-->
     <link rel="stylesheet" href="assets/css/main.css"/>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/start/jquery-ui.css">
     <!--[if lte IE 8]>
     <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
     <!--[if lte IE 9]>
@@ -286,28 +287,53 @@
     </article>
 </div>
 
+<div id="dialog-message" title="how to reach us">
+    <p>
+        <span class="ui-icon ui-icon-circle-check" style="float:left; margin:0 7px 50px 0;"></span>
+        Thank you for the message, and we will follow up with you shortly.
+    </p>
+</div>
+
 <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/skel.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/skel/3.0.0/skel.min.js"></script>
 <script src="assets/js/skel-viewport.min.js"></script>
 <script src="assets/js/util.js"></script>
 <!--[if lte IE 8]>
 <script src="assets/js/ie/respond.min.js"></script><![endif]-->
 <script src="assets/js/main.js"></script>
 <script type="text/javascript">
-    var frm = $('#ss-form');
-    frm.submit(function (ev) {
-        ev.preventDefault();
-        $.ajax({
-            type: frm.attr('method'),
-            url: frm.attr('action'),
-            data: frm.serialize(),
-            success: function (data, textStatus, jqXHR) {
-                alert(textStatus);
-            },
-            error:function( jqXHR,  textStatus,  errorThrown){
-                alert(textStatus);
+
+    $(function () {
+
+        var frm = $('#ss-form');
+        frm.submit(function (ev) {
+            ev.preventDefault();
+            $.ajax({
+                type: frm.attr('method'),
+                url: frm.attr('action'),
+                data: frm.serialize(),
+                success: function (data, textStatus, jqXHR) {
+                    alert(textStatus);
+                },
+                error: function (jqXHR, textStatus, errorThrown) {
+                    myDialog.dialog( "open" );
+                }
+            });
+        });
+
+
+      var myDialog =    $("#dialog-message").dialog({
+            modal: true,
+            autoOpen: false,
+           // height: 300,
+           // width: 350,
+            buttons: {
+                Ok: function () {
+                    $(this).dialog("close");
+                }
             }
         });
     });
