@@ -1730,6 +1730,16 @@
 				color: #777;
 			}
 
+/* Lists */
+
+/*article >  ul {
+
+
+	list-style-type: decimal;
+
+}*/
+
+
 /* Desktop */
 
 	@media screen and (min-width: 737px) {
