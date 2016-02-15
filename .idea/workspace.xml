@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f076835c-05c6-4a5b-b854-cd4cdc92038b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/CNAME" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CNAME" afterPath="$PROJECT_DIR$/CNAME" />
     </list>
     <ignored path="html5up-miniport.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -171,7 +172,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="72" y="191" width="1298" height="999" extended-state="0" />
+    <frame x="72" y="191" width="1298" height="999" extended-state="1" />
     <editor active="false" />
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11934477" sideWeight="0.48706412" order="0" side_tool="false" content_ui="combo" />
@@ -297,14 +298,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CNAME">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3325062">
@@ -318,6 +311,14 @@
             <element signature="e#14006#14088#0" expanded="false" />
             <element signature="e#14167#17308#1" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CNAME">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
